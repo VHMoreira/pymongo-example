@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de usuarios</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>senha</th>
+        </tr>
+        {% for u in list %}
+            <tr>
+                <td>
+                   {{u._id}} 
+                </td>
+                <td>
+                   {{u.name}} 
+                </td>
+                <td>
+                    {{u.email}}
+                </td>
+                <td>
+                    {{u.senha}}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
